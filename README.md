@@ -18,6 +18,8 @@
 
 [Google Doc Link Activity 2](https://docs.google.com/document/d/1RHdwQ6bJwzm1yvrqXCDy2VgBkrWVfvVI6CLvcCByLD8/edit?usp=sharing)
 
+<img width="600" height="440" alt="a graphic breakdown of MG1" src="https://github.com/damienzemanek/GA208/blob/main/W1Script2.png?raw=true" />
+
 ## MG1
 <hr>
 

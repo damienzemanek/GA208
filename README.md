@@ -18,4 +18,17 @@
 
 [Google Doc Link Activity 2](https://docs.google.com/document/d/1RHdwQ6bJwzm1yvrqXCDy2VgBkrWVfvVI6CLvcCByLD8/edit?usp=sharing)
 
+# MG1
+<hr>
+
+## Devlog
+<hr>
+
+Damien Zemanek
+
+## Open Source Assets
+
+- [Player Sprite](https://www.clipartmax.com/middle/m2i8i8A0A0H7A0Z5_free-bunny-in-overalls-front-view-overall-clip-art/)
+- [Seed Sprite](https://www.vecteezy.com/png/15082209-sapling-sprouting-from-soil)
+
 

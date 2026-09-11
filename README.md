@@ -25,6 +25,8 @@
 ### Devlog
 <hr>
 
+[Itch Build 0.0.1](https://starnightstudios.itch.io/ga208-mg1-assignment-game)
+
 Asset Procurement:
 - I looked online for an image of a bunny and a sapling, collected, and imported them
 - I made a new folder called W1 in the main directory, and inside that a folder called `Assets` and in a folder in that called `Sprites`

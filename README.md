@@ -26,4 +26,5 @@
 - `static` keyword does not require an instance
 
 ### MG-2 Breakdown
-<img width="2304" height="1296" alt="MG2 Breakdown2" src="https://github.com/user-attachments/assets/99e9ec4a-b761-40dc-ade4-d57dcfb37e61" />
+<img width="2304" height="1296" alt="MG2 Breakdown3" src="https://github.com/user-attachments/assets/35aabbd6-af23-4bef-ba0b-4b840bc0cefc" />
+

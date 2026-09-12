@@ -21,3 +21,7 @@
 <img width="600" height="440" alt="a graphic breakdown of MG1" src="https://github.com/damienzemanek/GA208/blob/main/W1Script2.png?raw=true" />
 
 
+# W2
+<hr>
+
+- `static` keyword does not require an instance

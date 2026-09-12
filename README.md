@@ -22,6 +22,5 @@
 
 
 # W2
-<hr>
 
 - `static` keyword does not require an instance

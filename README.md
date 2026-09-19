@@ -41,6 +41,7 @@
 
 - States in a state machine are mutually exclusive
 
+### Activity 4 - MG-3 Breakdown
 
 <img width="2304" height="1296" alt="sdadsad" src="https://github.com/user-attachments/assets/291e4c5e-fbce-4bb1-a17f-6b5fa9ec8eda" />
 

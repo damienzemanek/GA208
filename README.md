@@ -33,3 +33,18 @@
 <img width="2304" height="1296" alt="MG2 Breakdown4" src="https://github.com/user-attachments/assets/106f8afd-86fe-4a36-94cd-289344bdc19e" />
 
 
+# W3
+
+### Activity 1 - Notes
+<hr>
+
+- States in a state machine are mutually exclusive
+
+
+
+
+
+
+
+
+

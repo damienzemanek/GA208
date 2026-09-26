@@ -2,105 +2,64 @@ using UnityEngine;
 
 public class Muskrat : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private Collider _collider;
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotationSpeed;
-    [SerializeField] private float _jumpForce = 5.0f;
+    [SerializeField] Animator _animator;
+    [SerializeField] Rigidbody _rigidbody;
+    [SerializeField] Collider _collider;
+    [SerializeField] float _moveSpeed;
+    [SerializeField] float _rotationSpeed;
+    [SerializeField] float _jumpForce = 5.0f;
 
-    private bool _orbitMode;
-    private Transform _sphereTransform;
+    bool _orbitMode;
+    Transform _sphereTransform;
 
-    // ------------------------------------------------------------------------
-    private void Update()
+    void Update()
     {
-        if (_orbitMode)
-        {
-            MoveOrbitMode();
-        }
-        else
-        {
-            MoveNormal();
-        }
-
-        Jump();
+        if (_orbitMode) MoveOrbitMode();
+        else MoveNormal();
+        TryJump();
     }
 
-    // ------------------------------------------------------------------------
-    private void MoveOrbitMode()
+    void MoveOrbitMode()
     {
-        float leftright = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
+
         Vector3 worldUp = transform.TransformDirection(Vector3.up);
-        transform.RotateAround(
-            transform.position,
-            worldUp,
-            leftright * _rotationSpeed * Time.deltaTime
-        );
+        transform.RotateAround(transform.position, worldUp, horiz * _rotationSpeed * Time.deltaTime);
 
-        float forward = Input.GetAxis("Vertical");
         Vector3 axis = transform.TransformDirection(Vector3.right);
-        transform.RotateAround(
-            _sphereTransform.position,
-            axis,
-            forward * _rotationSpeed * Time.deltaTime
-        );
-
-
-        // STEP 4 -------------------------------------------------------------
-        // Once again, set the "flying" and "running" parameters to animate 
-        //      the Muskrat.
-        // The Muskrat should never play the "flying" animation while on a
-        //      bubble.
-
-
-        // STEP 4 -------------------------------------------------------------
-    }
-
-    // ------------------------------------------------------------------------
-    private void MoveNormal()
-    {
-        // STEP 1 -------------------------------------------------------------
-        // This movement code only runs when the Muskrat is on flat ground.
-        //
-        // Use the input stored in leftright to rotate the Muskrat at
-        //      _rotationSpeed speed.
-        // Use the Transform.Rotate method: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.Rotate.html
-        // and don't forget about Time.deltaTime :D
-        //
-        // Hint: you'll need to multiply leftright by one of the static Vector3 values:
-        //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Vector3.html
-        //      like up, left, right, or forward.
-
-        float leftright = Input.GetAxis("Horizontal");
-
-        // STEP 1 -------------------------------------------------------------
-
-
-        // STEP 2 -------------------------------------------------------------
-        float movement = Input.GetAxis("Vertical");
-
-        // This line of code is incorrect. 
-        // Replace it with a different line of code that uses 'movement' to
-        //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
-
-        // STEP 2 -------------------------------------------------------------
-
-
-        // STEP 3 -------------------------------------------------------------
-        // Change the "flying" and "running" parameters on the Animator based
-        //      on the Muskrat's movement to animate the Muskrat.
-        // Use _rigidbody.linearVelocity.
-        // You may also find the absolute value method, Mathf.Abs(), helpful:
-        //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.Abs.html
-
+        transform.RotateAround(_sphereTransform.position, axis, vert * _rotationSpeed * Time.deltaTime);
         
-        // STEP 3 -------------------------------------------------------------
+        SetAnimationValues(vert);
     }
 
-    // ------------------------------------------------------------------------
-    private void Jump()
+    void MoveNormal()
+    {
+        float horiz = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
+        
+        Vector3 move = new Vector3(0f, 0f, vert);
+        Vector3 rot = new Vector3(0, horiz, 0);
+        
+        transform.Translate(move * _moveSpeed * Time.deltaTime);
+        transform.rotation *= Quaternion.Euler(rot);
+        
+        SetAnimationValues(vert);
+    }
+
+    void SetAnimationValues(float vert)
+    {
+        Vector3 move = new Vector3(0f, 0f, vert);
+        bool moving = move.magnitude > 0;
+        var localVel = transform.InverseTransformDirection(_rigidbody.linearVelocity);
+        Debug.Log(localVel);
+        bool movingUpOrDown = Mathf.Abs(localVel.y) > 0.1f;
+        _animator.SetBool("running", moving);
+        _animator.SetBool("flying", movingUpOrDown);
+    }
+    
+
+    void TryJump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -129,12 +88,14 @@ public class Muskrat : MonoBehaviour
 
             ContactPoint contact = collision.GetContact(0);
 
+            // tangent OF the normal is 90 degrees
+            // taking the cross product of 2 angles get the vector perpedicular to both --> Which is the forward direction if we use Vector3.right
             Vector3 tangent = Vector3.Cross(Vector3.right, contact.normal);
-
-            transform.SetPositionAndRotation(
-                contact.point,
-                Quaternion.LookRotation(tangent, contact.normal)
-            );
+            
+            // Apply pos and rot
+            Quaternion forwardRotation = Quaternion.LookRotation(tangent, contact.normal);
+            
+            transform.SetPositionAndRotation(contact.point, forwardRotation);
         }
     }
 }

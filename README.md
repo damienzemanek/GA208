@@ -48,6 +48,14 @@
 
 # W4
 
+Scalar: Single Mathematical Value
+Q: Which one of these lines of code will move the object relative to the world, and why?
+A: `transform.position += moveAmount;`
+Explanation: transform.position is the world-relative Vector3 position of any given GameObject's transform. Meaning any mutations done to transform.position will act on the world-relative.
+
+
+
+
 
 
 

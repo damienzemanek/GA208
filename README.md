@@ -47,14 +47,14 @@
 
 ### Activity 1: Lecture Notes
 
-Scalar: Single Mathematical Value
-Q: Which one of these lines of code will move the object relative to the world, and why?
-A: `transform.position += moveAmount;`
-Explanation: transform.position is the world-relative Vector3 position of any given GameObject's transform. Meaning any mutations done to transform.position will act on the world-relative.
+- Scalar: Single Mathematical Value
+- Q: Which one of these lines of code will move the object relative to the world, and why?
+- A: `transform.position += moveAmount;`
+- Explanation: transform.position is the world-relative Vector3 position of any given GameObject's transform. Meaning any mutations done to transform.position will act on the world-relative.
 
 ### Activity 2: Vectors & animation
-Q: Step 2 of your Muskrat code, why does your new line of code move the Muskrat forward correctly? Use the vocab term "coordinate space".
-A: My line of code moves the Muskrat forward correctly because I am correctly mutating the local-offsetting co-ordinate space of the Muskrat's Transform component instead of the global position by using `transform.Translate(...)` and using my local move vector as the parameter.
+- Q: Step 2 of your Muskrat code, why does your new line of code move the Muskrat forward correctly? Use the vocab term "coordinate space".
+- A: My line of code moves the Muskrat forward correctly because I am correctly mutating the local-offsetting co-ordinate space of the Muskrat's Transform component instead of the global position by using `transform.Translate(...)` and using my local move vector as the parameter.
 
 
 

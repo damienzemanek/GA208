@@ -56,6 +56,14 @@
 - Q: Step 2 of your Muskrat code, why does your new line of code move the Muskrat forward correctly? Use the vocab term "coordinate space".
 - A: My line of code moves the Muskrat forward correctly because I am correctly mutating the local-offsetted co-ordinate space of the Muskrat's Transform component instead of the global position by using `transform.Translate(...)` and using my local move vector as the parameter.
 
+# W5
+
+### Activity 1: Lecture Notes
+
+- Model (Data) ←— stewards — Controller (logic) ←— Listens to —- View (asthetics/results)
+-Model: Game data
+- View: Visuals & results, sound, ui, aimations, Subs to controller events and reacts to changes
+- Controlelr: pure game logic, battles, points, branching dialuage
 
 
 

@@ -89,7 +89,7 @@
 - Why? FSM because he looking for animations for each action. In which it is assumed that each action is mutually exclusive to another, meaning each action happens at once. That means that for each action, that action can be connected to one animation via the FSM's `OnUse` Event.
 - Chosen 2nd Game: Hatsune Miku Rythm Game:
 - Appropriate Architectural Pattern: SO's
-- Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using the SO configuration.
+- Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using an enum for KeyCode the SO configuration.
 
 ### Activity 5: Final Group Meeting 1
 - Attendance: Damien, Logan

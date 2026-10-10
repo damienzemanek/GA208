@@ -9,7 +9,7 @@
 - Q3: prints: hello world
 - Q4: Monobehaviour
 - Q5: prints: x = 10
-- Q6: Both are arguements, meant to pass in values to a method
+- Q6: Both are arguments, meant to pass in values to a method
 - Q7: Transform is wrong, will not compile due to Translate being an instance method
 - Q8: Transform should be replaced with either _playerTransform or transform depending on the context
 
@@ -59,10 +59,10 @@
 
 ### Activity 1: Lecture Notes
 
-- Model (Data) ←— stewards — Controller (logic) ←— Listens to —- View (asthetics/results)
+- Model (Data) ←— stewards — Controller (logic) ←— Listens to —- View (aesthetics/results)
 -Model: Game data
-- View: Visuals & results, sound, ui, aimations, Subs to controller events and reacts to changes
-- Controlelr: pure game logic, battles, points, branching dialuage
+- View: Visuals & results, sound, ui, animations, Subs to controller events and reacts to changes
+- Controller: pure game logic, battles, points, branching dialouge
 
 ### Activity 3: MG4 Breakdown
 <img width="859" height="617" alt="MG4 Breakdown" src="https://github.com/user-attachments/assets/684e2e88-611d-4c70-824e-d985f6183832" />
@@ -73,4 +73,7 @@
 ### Activity 1: Lecture Notes
 - Quizzes have 2 attempts
 
+### Activity 2: Abstract classes & Interfaces
+Q: What do you think of the design of these interfaces and abstract classes? Would you keep it the same, or change it, if you were building a project with items like these?
+A: I like the design of the interfaces and abstract classes. The use of the interface matches well with its intended outcome. Keeping breakability separate from an abstract I think is a good thing to do because it lends more towards composition over inheritance. Breakable is a functionality that is not very extensive and in-depth and perfectly fits with a compositional concrete implementation. Yes, I would keep the classes the same if I was building a project with items like these. However, as soon as the compositionality of the Items in respect to the amount of interfaces there are available increases to over 5, I would change to data-driven composition.
 

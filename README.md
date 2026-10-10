@@ -92,5 +92,6 @@
 - Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using an enum for KeyCode the SO configuration.
 
 ### Activity 5: Final Group Meeting 1
-- Attendance: Damien, Logan
+
+
 

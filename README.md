@@ -68,4 +68,9 @@
 <img width="859" height="617" alt="MG4 Breakdown" src="https://github.com/user-attachments/assets/684e2e88-611d-4c70-824e-d985f6183832" />
 
 
+# W6
+
+### Activity 1: Lecture Notes
+- Quizzes have 2 attempts
+
 

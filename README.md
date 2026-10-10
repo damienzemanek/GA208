@@ -62,7 +62,7 @@
 - Model (Data) ←— stewards — Controller (logic) ←— Listens to —- View (aesthetics/results)
 -Model: Game data
 - View: Visuals & results, sound, ui, animations, Subs to controller events and reacts to changes
-- Controller: pure game logic, battles, points, branching dialouge
+- Controller: pure game logic, battles, points, branching dialogue
 
 ### Activity 3: MG4 Breakdown
 <img width="859" height="617" alt="MG4 Breakdown" src="https://github.com/user-attachments/assets/684e2e88-611d-4c70-824e-d985f6183832" />
@@ -76,4 +76,21 @@
 ### Activity 2: Abstract classes & Interfaces
 - Q: What do you think of the design of these interfaces and abstract classes? Would you keep it the same, or change it, if you were building a project with items like these?
 - A: I like the design of the interfaces and abstract classes. The use of the interface matches well with its intended outcome. Keeping breakability separate from an abstract I think is a good thing to do because it lends more towards composition over inheritance. Breakable is a functionality that is not very extensive and in-depth and perfectly fits with a compositional concrete implementation. Yes, I would keep the classes the same if I was building a project with items like these. However, as soon as the compositionality of the Items in respect to the amount of interfaces there are available increases to over 5, I would change to data-driven composition.
+
+### Activity 3 : SO Notes
+- Gamedata: All kinds of information for different objects the player might encounter
+- Its good practice to keep logic (behavior, actions) in code and data in assets
+- Makes it possible for artists and designers to tune data w/out having to write code.
+
+### Activity 4 : Design Pattern Discussion
+- Task: Generally describe building 2 games using architectural patterns shown in class that best apply
+- Chosen 1st Game: Stardew Valley
+- Appropriate Architectural Pattern: FSM
+- Why? FSM because he looking for animations for each action. In which it is assumed that each action is mutually exclusive to another, meaning each action happens at once. That means that for each action, that action can be connected to one animation via the FSM's `OnUse` Event.
+- Chosen 2nd Game: Hatsune Miku Rythm Game:
+- Appropriate Architectural Pattern: SO's
+- Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using the SO configuration.
+
+### Activity 5: Final Group Meeting 1
+- Attendance: Damien, Logan
 

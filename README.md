@@ -92,6 +92,13 @@
 - Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using an enum for KeyCode the SO configuration.
 
 ### Activity 5: Final Group Meeting 1
+- (Complete)
 
+# W7
 
+### Activity 1: Notes
+
+- Performance: The act of hitting optimization goals
+- Memory: Space on the computer for data
+- Q: Does having an object with a certain bytelength with a lazy-initted member, where the member being initialized contained in the original object makes the original object grow in bytesize, does the original object get taken out of the heap and put back it in a new location? the edge-case being For nullable value-types. From what I understand, a new managed heap object member would just be created and the pointer given to the original, and value-types would be initialized with the size of the original.
 

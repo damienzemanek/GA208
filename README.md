@@ -87,7 +87,7 @@
 - Chosen 1st Game: Stardew Valley
 - Appropriate Architectural Pattern: FSM
 - Why? FSM because he looking for animations for each action. In which it is assumed that each action is mutually exclusive to another, meaning each action happens at once. That means that for each action, that action can be connected to one animation via the FSM's `OnUse` Event.
-- Chosen 2nd Game: Hatsune Miku Rythm Game:
+- Chosen 2nd Game: Hatsune Miku Rhythm Game:
 - Appropriate Architectural Pattern: SO's
 - Why? SO's would be good here because Nemo needs configuration, which is essentially data. Which is essentially SO's because SOs store data and can be accessed for use in code later. He can best represent the beats in code using an enum for KeyCode the SO configuration.
 
@@ -100,5 +100,18 @@
 
 - Performance: The act of hitting optimization goals
 - Memory: Space on the computer for data
-- Q: Does having an object with a certain bytelength with a lazy-initted member, where the member being initialized contained in the original object makes the original object grow in bytesize, does the original object get taken out of the heap and put back it in a new location? the edge-case being For nullable value-types. From what I understand, a new managed heap object member would just be created and the pointer given to the original, and value-types would be initialized with the size of the original.
+- Q: Does having an object with a certain byte length with a lazy-initted member, where the member being initialized contained in the original object makes the original object grow in bitesize, does the original object get taken out of the heap and put back it in a new location? the edge-case being For nullable value-types. From what I understand, a new managed heap object member would just be created and the pointer given to the original, and value-types would be initialized with the size of the original.
+
+# W8
+
+- Started Final Project
+
+# W9
+
+Pre-learning Quiz Recap
+- An Architectural Solution will scale well, if when the program is handling LOTS of data, is it (1) PERFORMANT (2) EASY FOR USERS (programmers, designers, artists) TO ADD MORE DATA/BUILD FEATURES.
+- Q: Why should scaling matter as a GDIM student? (Esp. A Programmer)
+- A: In the future, what matters a lot is efficiency, if your working very manually, your working harder not smarter. It's important for that stuff to work well and fast so that any outcomes you achieve can be achieved in a realistic timeline and be of a higher quality.
+- Q: How does the concept of scaling relate to programming design patterns?
+- A: Its the 'It Depends' Answer, where what you chose matters depending on your scope, capabilities, limitations, restrictions, and desired outcome. Its important for your chosen programming design patters to keep your code manageable, and choosing what scales well in what situation matters significantly-
 

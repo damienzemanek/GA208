@@ -115,3 +115,19 @@ Pre-learning Quiz Recap
 - Q: How does the concept of scaling relate to programming design patterns?
 - A: Its the 'It Depends' Answer, where what you chose matters depending on your scope, capabilities, limitations, restrictions, and desired outcome. Its important for your chosen programming design patters to keep your code manageable, and choosing what scales well in what situation matters significantly-
 
+Commits Made in Oct: 30: https://github.com/damienzemanek/tacotruckgame/commits/main/
+Summary of Features: 
+- `InteractionEventContext` centralizes prompt usage of the Interactor script
+- Ingredients can be comined using the `IngredientCombinationDb` check via the `Ingredient.cs` script which accesses the Db via `ersistenConfigurationDataHolder` which has the db as a member. The data holder is a singleton.
+- Fixed a bug with the grab releasing objects that remain in the air
+- Helped Logan implement prompt changes
+Reflection:
+-  Due to needing to help logan for a significant portion of time, I did not manage to complete my task in class. However I made significant progress and the measurable end state is very close. About 30 minutes more and it should be complete. (From time of writing)
+- I also used breakpoints to debug an Error, I took a video of that here: https://drive.google.com/file/d/1X6BScG_vLV2oSJ64s3wnGQBHLGnxG2K3/view?usp=sharing
+- It helped me narrow down in the stack trace where exactly the bug was, It was an unassigned refernce that wasn't exceptioning in a way that told me right away. I had to trace down where it started from by using the Breakpoint to tell me what exactly was null. Which gave me a hint to check in certain areas.
+How I collaborated with my partner today:
+- I helped logan fix the Player Interaction's TMPro prompt dependacy. I gave him an actionable task and walked him through the implementation:
+-  <img width="1526" height="1573" alt="image" src="https://github.com/user-attachments/assets/c0a3615e-f999-4043-8ed0-74f781288ff3" />
+- As a result, I learned that helping someone can be somewhat hard due to difficulties in frustration management.
+
+

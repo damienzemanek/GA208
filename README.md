@@ -105,6 +105,9 @@
 # W8
 
 - Started Final Project
+- New Features Added Currently: (1) Basic Interaction (2) Item Pickup (3) Abstracts Setup (4) Mouselook (5) Character Controller Movement
+- New Features Summary: We have implemented basic interaction which coincides with the Item Pickup mechanic, these are core systems that used to interact with the world. We have also implemented Mouselook and Character Controller movemnet which is a basic system that will serve as a building block for all gameplay.
+- How I collaborated with my Partner: I helped my partner make the document without doing it for them. I asked questions that would help my partner realize a vision that is able to be worked on that is still interesting. I  helped my partner understand basic necessities in a game project of this scope. I assigned my partner tasks with clear specifications with written and guided directions that they could refer back to at any time. As a result, I learned how to manage someone who is having trouble learning how to script.
 
 # W9
 
